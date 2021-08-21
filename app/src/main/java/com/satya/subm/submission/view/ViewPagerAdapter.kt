@@ -1,9 +1,8 @@
-package com.satya.subm.submission
+package com.satya.subm.submission.view
 
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.satya.subm.submission.view.landing.NowPlayingMovieFragment
 
 //class ViewPagerAdapter(fm : FragmentManager, lc : Lifecycle): FragmentStateAdapter(fm, lc) {
 //
@@ -29,7 +28,7 @@ class ViewPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
     override fun createFragment(position: Int): Fragment {
         var fragment = Fragment()
         when(position){
-            0 -> fragment = HomeFragment()
+            0 -> fragment = NowPlayingMovieFragment()
             1 -> fragment = ProfileFragment()
 
         }

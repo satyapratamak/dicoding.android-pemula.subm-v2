@@ -1,12 +1,9 @@
-package com.satya.subm.submission
+package com.satya.subm.submission.view
 
-import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.viewpager.widget.ViewPager
 
-import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
+import com.satya.subm.submission.R
 import com.satya.subm.submission.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

@@ -1,10 +1,11 @@
-package com.satya.subm.submission
+package com.satya.subm.submission.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.satya.subm.submission.R
 
 
 class HomeFragment : Fragment() {

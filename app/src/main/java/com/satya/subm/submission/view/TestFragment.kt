@@ -1,4 +1,4 @@
-package com.satya.subm.submission
+package com.satya.subm.submission.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -73,4 +73,16 @@ object NetworkModule {
             .baseUrl(baseUrl)
             .build()
     }
+
+    @Singleton
+    @Provides
+    fun provideMovieService(retrofit: Retrofit) : MovieService{
+        return retrofit.create(MovieService::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideNowPlayingMovieService(retrofit: Retrofit) : NowPlayingMovieService{
+        return retrofit.create(NowPlayingMovieService::class.java)
+    }
 }
