@@ -5,7 +5,10 @@ import android.os.Bundle
 
 import com.satya.subm.submission.R
 import com.satya.subm.submission.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding

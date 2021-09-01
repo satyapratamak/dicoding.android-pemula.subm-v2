@@ -6,27 +6,30 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.satya.subm.submission.R
+import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 
-class NowPlayingMovieFragment : Fragment() {
+@AndroidEntryPoint
+class NowPlayingMovieFragment : Fragment(R.layout.now_playing_movie_fragment) {
 
-    companion object {
-        fun newInstance() = NowPlayingMovieFragment()
-    }
+    private val nowPlayingMovieViewModel by viewModels<NowPlayingMovieViewModel>()
 
-    private lateinit var viewModel: NowPlayingMovieViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.now_playing_movie_fragment, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
+    /*override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(NowPlayingMovieViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        nowPlayingMovieViewModel.nowPlayingMovies.observe(viewLifecycleOwner, Observer {
+            Timber.i("success")
+        })
+    }*/
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        nowPlayingMovieViewModel.nowPlayingMovies.observe(viewLifecycleOwner, Observer {
+            Timber.i("success")
+        })
     }
 
 }
